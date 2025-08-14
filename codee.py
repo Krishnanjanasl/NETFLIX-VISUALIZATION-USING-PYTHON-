@@ -25,7 +25,6 @@ plt.figure(figsize=(6,4))
 sns.countplot(data=df, x='type', palette=['red', 'grey'])
 plt.title("Movies vs TV Shows on Netflix")
 plt.savefig("images/movies_vs_tvshows.png", dpi=300, bbox_inches="tight")
-plt.savefig("images/figure_1.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 
@@ -37,7 +36,6 @@ plt.title("Number of Titles Released per Year")
 plt.xlabel("Release Year")
 plt.ylabel("Count")
 plt.savefig("images/titles_per_year.png", dpi=300, bbox_inches="tight")
-plt.savefig("images/figure_2.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 #Top 10 Countries by Content
@@ -47,7 +45,6 @@ plt.figure(figsize=(8,5))
 sns.barplot(x=top_countries.values, y=top_countries.index, palette='Reds')
 plt.title("Top 10 Countries by Netflix Content")
 plt.savefig("images/top_countries.png", dpi=300, bbox_inches="tight")
-plt.savefig("images/figure_3.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 #Distribution of Ratings
@@ -57,7 +54,6 @@ plt.figure(figsize=(8,5))
 sns.countplot(data=df, y='rating', order=order, palette='Reds')
 plt.title("Distribution of Ratings on Netflix")
 plt.savefig("images/ratings_distribution.png", dpi=300, bbox_inches="tight")
-plt.savefig("images/figure_4.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 #Movie Duration Distribution
@@ -70,7 +66,6 @@ sns.histplot(movies_df['duration_minutes'], bins=30, color='red')
 plt.title("Movie Duration Distribution")
 plt.xlabel("Minutes")
 plt.savefig("images/movie_duration_distribution.png", dpi=300, bbox_inches="tight")
-plt.savefig("images/figure_5.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 #Top 10 Genres
@@ -84,7 +79,6 @@ plt.figure(figsize=(8,5))
 sns.barplot(x=top_genres.values, y=top_genres.index, palette='Reds')
 plt.title("Top 10 Genres on Netflix")
 plt.savefig("images/top_genres.png", dpi=300, bbox_inches="tight")
-plt.savefig("images/figure_6.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 #Correlation Heatmap
@@ -94,7 +88,6 @@ sns.heatmap(df.select_dtypes(include='number').corr(),
             annot=True, cmap='coolwarm')
 plt.title('Correlation Heatmap')
 plt.savefig("images/heatmap.png", dpi=300, bbox_inches="tight")
-plt.savefig("images/figure_7.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 
